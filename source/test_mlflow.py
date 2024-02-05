@@ -1,5 +1,5 @@
 # %%
-%env MLFLOW_TRACKING_URI=http://localhost:8000
+%env MLFLOW_TRACKING_URI=http://localhost:8002
 # %%
 import mlflow
 import os
@@ -15,5 +15,4 @@ with mlflow.start_run():
         mlflow.log_artifact(f.name, 'files_folder')
 # %%
 
-        print(f.name)
-# %%
+print(f.name)
