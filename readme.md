@@ -6,6 +6,11 @@
 - Tener en cuenta que todo este repositorio fue creado en Ubuntu 22.04
 - Usar DBeaver para ver las modificaciones de las Bases de Datos
 
+## Repositorios usados
+
+https://github.com/AntonioTepsich/dbt-movie-recommender-system.git
+
+
 
 ## Definición de variables de entorno
 setear environments
