@@ -212,3 +212,60 @@ test> db.createUser(
   }
 )
 ```
+
+
+
+
+
+
+
+
+
+# Paste
+
+
+ML-Flow
+```bash
+cd Desktop/Recommender_movie_system/mlops-ecosystem
+
+
+conda activate mlflow-server
+
+
+set -o allexport && source environments/local && set +o allexport
+
+
+mlflow server --backend-store-uri postgresql://$POSTGRES_USER:$POSTGRES_PASSWORD@$POSTGRES_HOST/$MLFLOW_POSTGRES_DB --default-artifact-root $MLFLOW_ARTIFACTS_PATH -h 0.0.0.0 -p 8002
+
+```
+
+
+Airbyte
+```bash
+cd ../airbyte
+
+
+./run-ab-platform.sh
+
+username: airbyte 
+password: password
+```
+
+Dagster
+```bash
+cd ../movies_dagster
+
+
+conda activate dagster-mlops
+
+
+set -o allexport && source environments/local && set +o allexport
+
+
+dagster dev
+```
+
+
+
+
+
